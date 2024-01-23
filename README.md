@@ -3,6 +3,8 @@
 # Spring 2024 Team
 Manu Achar - Project Manager and Data Modeler
 
+Cody Ledford - Data Analyzer, Client Liason
+
 
 # Description
 Our team is the Algorithm Allies! We are working on a Kaggle project via their Challenges section. Our client will be Dr. Gunay.
