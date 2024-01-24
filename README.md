@@ -3,7 +3,7 @@
 # Spring 2024 Team
 Manu Achar - Project Manager and Data Modeler
 
-Cody Ledford - Data Analyzer, Client Liaison
+Cody Ledford - Data Analyzer and Client Liaison
 
 Pratik Chaudhari - Document Manager and Data Visualizer
 
