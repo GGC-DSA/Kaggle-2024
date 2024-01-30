@@ -21,6 +21,7 @@ The goal of this competition is to develop a model that detects sensitive person
   - Final file: submission.csv
 - Should match with given submission_sample.csv
   - Evaluation score > 0.8?, > 50 percentile
+- Simple website with team info, visualizations, description, procedures and algorithms
 
 ## Systems Requirements
 - Submission format: row_id, document, token, label
@@ -53,12 +54,20 @@ The goal of this competition is to develop a model that detects sensitive person
     - Power BI
     - Matplotlib
     - R
+- Webpage
+  - markdown gist, include:
+    - team info
+    - visualizations
+    - project description
+    - procedure
+    - algorithms
 
 ## Deliverables
 - 1st iteration
   - Data collection
     - Kaggle test/training
     - External data for after 1st model
+    - Mock up of webpage
 - 2nd iteration
   - Initial data exploration using test dataset (priority)
   - 1st model from training dataset
