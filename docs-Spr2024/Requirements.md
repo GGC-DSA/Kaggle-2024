@@ -62,7 +62,6 @@ The goal of this competition is to develop a model that detects sensitive person
     - procedure
     - algorithms
 
-
 ## Deliverables
 - 1st iteration
   - Data collection
