@@ -1,0 +1,47 @@
+{
+"id": "DATANODE_message_d93c8875-467b-4d5c-88e6-769d91e35c7c",
+"config_id": "message",
+"scope": "<Scope.SCENARIO: 1>",
+"storage_type": "pickle",
+"name": null,
+"owner_id": "SCENARIO_scenario_4eae4852-ebff-413b-8e89-b7a2b6f5377f",
+"parent_ids": [
+"TASK_build_msg_0b3c4356-0b83-4bc0-870f-b3fd40c04e0e"
+],
+"last_edit_date": "2024-02-21T21:59:10.881187",
+"edits": [
+{
+"job_id": "JOB_build_msg_3fdd1f3a-d05e-4ead-862d-b63235307add",
+"timestamp": "2024-02-21T20:12:26.010746"
+},
+{
+"job_id": "JOB_build_msg_02a681dc-6206-4868-879b-60ef2b8a9a37",
+"timestamp": "2024-02-21T20:13:59.146793"
+},
+{
+"job_id": "JOB_build_msg_e25b6f7a-3b35-469f-aeac-5877d1335567",
+"timestamp": "2024-02-21T20:14:05.039128"
+},
+{
+"job_id": "JOB_build_msg_34fa13c5-9e7f-4ba5-857c-6d473a4fdde5",
+"timestamp": "2024-02-21T21:58:51.394510"
+},
+{
+"job_id": "JOB_build_msg_4d98c119-c555-434b-9db5-5b626bcaa9b1",
+"timestamp": "2024-02-21T21:59:03.037372"
+},
+{
+"job_id": "JOB_build_msg_269aa539-3af2-45d9-8969-6b578e76eba6",
+"timestamp": "2024-02-21T21:59:10.881187"
+}
+],
+"version": "e178a154-7ec0-4b8a-9d53-0467b26d6fca",
+"validity_days": null,
+"validity_seconds": null,
+"edit_in_progress": false,
+"editor_id": null,
+"editor_expiration_date": null,
+"data_node_properties": {
+"is_generated": true
+}
+}
