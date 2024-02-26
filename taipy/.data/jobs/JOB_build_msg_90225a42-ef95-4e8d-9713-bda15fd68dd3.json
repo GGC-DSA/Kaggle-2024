@@ -1,0 +1,20 @@
+{
+"id": "JOB_build_msg_90225a42-ef95-4e8d-9713-bda15fd68dd3",
+"task_id": "TASK_build_msg_772cc4d8-2e19-4fac-9bec-880002816db9",
+"status": "<Status.FAILED: 6>",
+"force": false,
+"submit_id": "SUBMISSION_cdca81c0-eb40-4b85-83b8-d15670e812cc",
+"submit_entity_id": "SCENARIO_scenario_f0abceaf-7f81-4af6-8564-73f4f08c7bc7",
+"creation_date": "2024-02-21T22:22:47.119644",
+"subscribers": [
+{
+"fct_name": "_Orchestrator._on_status_change",
+"fct_params": [],
+"fct_module": "taipy.core._orchestrator._orchestrator"
+}
+],
+"stacktrace": [
+"Traceback (most recent call last):\n  File \"C:\\Users\\cody1\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\taipy\\core\\_orchestrator\\_dispatcher\\_task_function_wrapper.py\", line 39, in _wrapped_function\n    results = fct(*cls.__read_inputs(inputs))\n  File \"C:\\Users\\cody1\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\taipy\\core\\_orchestrator\\_dispatcher\\_task_function_wrapper.py\", line 47, in __read_inputs\n    return [data_manager._get(dn.id).read_or_raise() for dn in inputs]\n  File \"C:\\Users\\cody1\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\taipy\\core\\_orchestrator\\_dispatcher\\_task_function_wrapper.py\", line 47, in <listcomp>\n    return [data_manager._get(dn.id).read_or_raise() for dn in inputs]\nAttributeError: 'NoneType' object has no attribute 'read_or_raise'\n"
+],
+"version": "e178a154-7ec0-4b8a-9d53-0467b26d6fca"
+}

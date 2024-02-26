@@ -1,0 +1,20 @@
+{
+"id": "JOB_download_pi_68497bbd-9a25-4464-aa3c-0c90d976f91d",
+"task_id": "TASK_download_pi_5a7e81db-9e32-440a-9edd-31f9de4e9178",
+"status": "<Status.FAILED: 6>",
+"force": false,
+"submit_id": "SUBMISSION_bbf53720-e954-46bc-a19a-6bf1ecd2175a",
+"submit_entity_id": "SCENARIO_scenario_ed1add67-466c-4970-9c36-82fdc7821567",
+"creation_date": "2024-02-23T01:07:19.879711",
+"subscribers": [
+{
+"fct_name": "_Orchestrator._on_status_change",
+"fct_params": [],
+"fct_module": "taipy.core._orchestrator._orchestrator"
+}
+],
+"stacktrace": [
+"Traceback (most recent call last):\n  File \"C:\\Users\\cody1\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\taipy\\core\\_orchestrator\\_dispatcher\\_task_function_wrapper.py\", line 39, in _wrapped_function\n    results = fct(*cls.__read_inputs(inputs))\n  File \"c:\\Users\\cody1\\OneDrive\\Desktop\\Kaggle-2024\\taipy\\hello_world.py\", line 61, in download_pi\n    message = state.scenario.message.read()\nAttributeError: 'str' object has no attribute 'scenario'\n"
+],
+"version": "9373de3e-448c-4fe7-b112-760c38ba600f"
+}

@@ -1,0 +1,17 @@
+{
+"id": "SCENARIO_scenario_ed1add67-466c-4970-9c36-82fdc7821567",
+"config_id": "scenario",
+"tasks": [
+"TASK_build_msg_7d796917-bb07-4d8b-8e31-7647526e2f6c",
+"TASK_download_pi_5a7e81db-9e32-440a-9edd-31f9de4e9178"
+],
+"additional_data_nodes": [],
+"properties": {},
+"creation_date": "2024-02-23T01:07:17.198583",
+"primary_scenario": false,
+"subscribers": [],
+"tags": [],
+"version": "9373de3e-448c-4fe7-b112-760c38ba600f",
+"sequences": null,
+"cycle": null
+}
