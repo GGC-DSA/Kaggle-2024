@@ -21,7 +21,7 @@ def save_message(message: str):
 
 
 # Stores the path to the temporary file - this is broken
-# temp_path = "../taipy/"
+temp_path = "../taipy/"
 
 # Remove the temporary file
 def clean_up(state):
@@ -62,7 +62,7 @@ def download_pi(state):
     try:
         save_message(message)
         print("Message saved to 'message.txt'.")
-        download(state, state.message,"message.txt", on_action=clean_up)
+        download(state, state.message,"message.txt", on_action=None)
     except Exception as e:
         print(f"An error occurred while saving the message: {e}")
 
