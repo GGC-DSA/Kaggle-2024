@@ -39,4 +39,36 @@ The following are the tags that should be identified in your text containing PII
               "I-ID_NUM", "I-NAME_STUDENT", "I-PHONE_NUM",
               "I-STREET_ADDRESS","I-URL_PERSONAL","O"]
 
-Using these predefined labels to train our model, our model should be able to properly tokenize, label, and report on the data that you provide.
+Using these predefined labels to train our model, our model should be able to properly tokenize, label, and report on the data that you provide. B-records indicate the beginning of PII data. I-records indicate the continuation of PII data. O-records indicate that the token (text) is not identified as containing the pre-defined labels of PII.
+
+*Step-by-step instructions to follow*
+
+In order to run the notebook containing the model which leverages NER and NLP to properly identify PII, there are some preliminary steps that you need to take to ensure that you have all of the necessary libraries and modules installed on your local machine.
+
+
+We will be using the following libraries and modules:
+torch
+keras
+keras_nlp
+ops
+tensorflow
+json
+numpy
+pandas
+tqdm.notebook
+sklearn
+plotly
+
+- To ensure that you have all of the dependencies downloaded, run the following commands as an administrator in your command prompt:
+
+```
+pip install torch
+pip install keras
+pip install keras_nlp
+pip install tensorflow
+pip install numpy
+pip install pandas
+pip install tqdm
+pip install sklearn
+pip install plotly
+```
