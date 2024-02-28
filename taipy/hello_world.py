@@ -62,7 +62,7 @@ def download_pi(state):
     try:
         save_message(message)
         print("Message saved to 'message.txt'.")
-        download(state, state.message,"message.txt", on_action=None)
+        download(state, state.message,"message.txt", on_action=clean_up)
     except Exception as e:
         print(f"An error occurred while saving the message: {e}")
 
@@ -87,6 +87,9 @@ Message: <|{message}|text|>
 ### Download your message:
 <|{None}|file_download|on_action=download_pi|>
 
+### Meet our team
+<|Highest_Point_America_CLedford.png|image|height=500|width=650|>
+
 """
 # <|{content}|file_download|>
 
@@ -107,5 +110,5 @@ def submit_scenario(state):
 if __name__ == "__main__":
     tp.Core().run()
     scenario = tp.create_scenario(scenario_cfg)
-    tp.Gui(page).run()
+    tp.Gui(page).run(use_reloader=True)
 
