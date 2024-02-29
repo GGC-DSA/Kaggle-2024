@@ -30,6 +30,8 @@ def clean_up(state):
 def download(state, content, name, on_action):
     print(f"Downloading {name}...")
     # Here you would implement the logic to handle the file download.
+    with open("message.txt", wb) as file:
+        file.write(wb)
     print(f"Download complete: {name}")
     # Call the provided on_action function if it's callable
     if callable(on_action):
@@ -82,13 +84,22 @@ page = """
 Name: <|{input_name}|input|>
 <|submit|button|on_action=submit_scenario|>
 
+
 Message: <|{message}|text|>
+
 
 ### Download your message:
 <|{None}|file_download|on_action=download_pi|>
 
+
 ### Meet our team
-<|Highest_Point_America_CLedford.png|image|height=500|width=650|>
+<|
+    Manu Achar <|../taipy/images/ManuA.jpg|image|height=50|width=75|>
+
+    Cody Ledford <|../taipy/images/CodyL.jpg|image|height=50|width=75|>
+
+    Pratik Chaudhari <|../taipy/images/PratikC.png|image|height=50|width=75|>
+|>
 
 """
 # <|{content}|file_download|>
