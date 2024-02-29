@@ -72,5 +72,5 @@ pip install tqdm
 pip install sklearn
 pip install plotly
 
-Optionally, you can navigate to the directory where the requirements.txt file is located, and run pip install requirements.txt - this will properly install all of the libraries and modules that are required by the application to run.
+Optionally, you can navigate to the directory where the requirements.txt file is located, and run pip install -r requirements.txt - this will properly install all of the libraries and modules that are required by the application to run.
 ```
