@@ -11,31 +11,51 @@ import taipy as tp
 import os
 from tempfile import NamedTemporaryFile
 
+# Stores the path to the temporary file - this is broken
+temp_path = "taipy/message.txt"
 
 def build_message(name: str):
     return f"Hello {name}! I am so glad that you are here!"
 
 def save_message(message: str):
-    with open("message.txt", "w") as file:
+    directory = "../taipy/"  # Adjust the directory as needed
+    filepath = os.path.join(directory, "message.txt")
+    with open(filepath, "w") as file:
         file.write(message)
 
-
-# Stores the path to the temporary file - this is broken
-temp_path = "../taipy/"
 
 # Remove the temporary file
 def clean_up(state):
     os.remove(state.temp_path + "message.txt")
 
-def download(state, content, name, on_action):
-    print(f"Downloading {name}...")
-    # Here you would implement the logic to handle the file download.
-    with open("message.txt", wb) as file:
-        file.write(wb)
-    print(f"Download complete: {name}")
-    # Call the provided on_action function if it's callable
-    if callable(on_action):
-        on_action(state)
+# def download(state, content, name, on_action):
+#     print(f"Downloading {name}...")
+#     # Here you would implement the logic to handle the file download.
+#     with open(state.temp_path + "message.txt", wb) as file:
+#         file.write(wb)
+#     print(f"Download complete: {name}")
+#     # Call the provided on_action function if it's callable
+#     if callable(on_action):
+#         on_action(state)
+    
+def download(state, filename, on_action):
+    try:
+        file_url = f"../taipy/{filename}"  # Adjust the path as needed
+        return f"<a href='{file_url}' download>Download {filename}</a>"
+    except Exception as e:
+        print(f"An error occurred while generating download link: {e}")
+
+    
+# def download(state, filename, on_action):
+#     try:
+#         return send_from_directory("taipy", filename, as_attachment=True)
+#     except Exception as e:
+#         print(f"An error occurred while downloading the file: {e}")
+
+# In your route or view function where you handle the download action:
+# @app.route('/download/<filename>')
+# def download_file(filename):
+#     return download(state, filename, on_action=clean_up)
 
 # Generate the message, save them in a CSV temporary file, then trigger a download action
 # for that file.
@@ -64,16 +84,18 @@ def download_pi(state):
     try:
         save_message(message)
         print("Message saved to 'message.txt'.")
-        download(state, state.message,"message.txt", on_action=clean_up)
+        download(state, "message.txt", on_action=save_message)
     except Exception as e:
         print(f"An error occurred while saving the message: {e}")
 
 
 input_name_data_node_cfg = Config.configure_data_node(id="input_name")
 message_data_node_cfg = Config.configure_data_node(id="message")
-dowload_file_task_cfg = Config.configure_task("download_pi", download_pi, message_data_node_cfg)
+#dowload_file_task_cfg = Config.configure_task("download_pi", download_pi, message_data_node_cfg)
+save_message_task_cfg = Config.configure_task("save_msg", save_message, message_data_node_cfg)
 build_msg_task_cfg = Config.configure_task("build_msg", build_message, input_name_data_node_cfg, message_data_node_cfg)
-scenario_cfg = Config.configure_scenario("scenario", task_configs=[build_msg_task_cfg, dowload_file_task_cfg])
+scenario_cfg = Config.configure_scenario("scenario", task_configs=[build_msg_task_cfg, save_message_task_cfg])
+#scenario_cfg = Config.configure_scenario("scenario", task_configs=[build_msg_task_cfg, dowload_file_task_cfg])
 
 
 # Previous configuration of scenario
@@ -89,19 +111,27 @@ Message: <|{message}|text|>
 
 
 ### Download your message:
+
 <|{None}|file_download|on_action=download_pi|>
+------
+
+# Meet Our Team:
+----------------
+
+## &emsp; &emsp; Manu Achar &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; Cody Ledford &emsp; &emsp; &emsp; &emsp; Pratik Chaudhari
+
+[![Manu Achar](images/ManuA.jpg)](images/ManuA.jpg) &emsp; [![Cody Ledford](images/CodyL.jpg)](images/CodyL.jpg) &emsp; [![Pratik Chaudhari](images/PratikC.png)](images/PratikC.png)
 
 
-### Meet our team
-<|
-    Manu Achar <|../taipy/images/ManuA.jpg|image|height=50|width=75|>
 
-    Cody Ledford <|../taipy/images/CodyL.jpg|image|height=50|width=75|>
-
-    Pratik Chaudhari <|../taipy/images/PratikC.png|image|height=50|width=75|>
-|>
 
 """
+# The exclamation mark in the markdown above is used to signify that the link passed in should be 
+# an image, and should display the image inline rather than a link, which is what would happen if
+# we were to use the same thing without an exclamation mark.
+
+# &emsp; is an HTML entity that will create a consistent empty space - it creates a space equal to the current font size which also ensures consistency.
+
 # <|{content}|file_download|>
 
 # The commented out code was to try and get a custom button. Need to
