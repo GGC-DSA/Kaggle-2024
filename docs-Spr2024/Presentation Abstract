@@ -1,0 +1,11 @@
+Pratik Chaudhari, Manu Achar, Cody Ledford
+
+Identifying Personal Identifiable Information in Student Essays
+
+With the emergence of the information age, the ever-growing need to protect personal information has become increasingly important.
+Leveraging machine learning, we aim to protect this highly valuable data, by identifying and masking.
+This is essential to be able to create and use large open datasets from these sources for use.
+Our solution to this is to build a NER model to identify and classify PII using datasets containing a student essay and prelabeled PIIs.
+We will build a webpage containing visual of analytics of the PIIs and the training processes.
+We hope to also integrate a model into the website, such that user can test the model with their own essays.
+Ultimately, we hope to allow research of educational data to happen more smoothly and efficiently while maintaining student privacy.
