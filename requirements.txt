@@ -1,0 +1,12 @@
+taipy
+numpy
+pandas
+tensorflow
+spacy
+transformers
+re
+pathlib
+datasets
+torch
+sklearn
+CountVectorizer

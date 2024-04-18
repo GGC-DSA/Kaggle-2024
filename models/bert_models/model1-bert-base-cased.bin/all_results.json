@@ -1,0 +1,12 @@
+{
+    "epoch": 5.0,
+    "predict_loss": 6.269933461311439e-10,
+    "predict_runtime": 164.9709,
+    "predict_samples_per_second": 71.188,
+    "predict_steps_per_second": 71.188,
+    "train_loss": 0.00022855613294419337,
+    "train_runtime": 4318.9691,
+    "train_samples": 27402,
+    "train_samples_per_second": 31.723,
+    "train_steps_per_second": 3.966
+}
