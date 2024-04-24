@@ -1,0 +1,120 @@
+element.style {
+}
+:root {
+    --table-stripe-opacity: 0.5;
+}
+:root {
+    --custom-scrollbar-width: 8px;
+    --custom-scrollbar-thumb-color: var(--color-primary);
+    --custom-scrollbar-rail-color: transparent;
+    --transition-duration: 300ms;
+}
+:root {
+    --element-padding: var(--spacing2);
+    --container-max-width: 75rem;
+    --sidebar-min-width: 15rem;
+}
+:root {
+    --border-radius-small: calc(var(--border-radius) / 2);
+    --border-radius-large: calc(var(--border-radius)* 2);
+    --box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+}
+:root {
+    --font-size-h1: 2.5rem;
+    --font-size-h2: 2rem;
+    --font-size-h3: 1.75rem;
+    --font-size-h4: 1.5rem;
+    --font-size-h5: 1.25rem;
+    --font-size-h6: 1rem;
+    --font-weight-heading: bold;
+    --font-size-body: 1rem;
+    --font-size-small: 0.875rem;
+    --font-size-caption: 0.75rem;
+}
+:root {
+    --spacing1: 1rem;
+    --spacing-half: calc(var(--spacing1)* 0.5);
+    --spacing2: calc(var(--spacing1)* 2);
+    --spacing3: calc(var(--spacing1)* 3);
+    --spacing4: calc(var(--spacing1)* 4);
+    --spacing5: calc(var(--spacing1)* 5);
+    --spacing6: calc(var(--spacing1)* 6);
+}
+:root {
+    --color-background: var(--color-background-light);
+    --color-paper: var(--color-paper-light);
+    --color-contrast-light: rgba(0, 0, 0, 0.87);
+    --color-contrast-dark: rgba(255, 255, 255, 0.87);
+    --color-contrast: var(--color-contrast-light);
+}
+:root {
+    --color-primary: #ff6049;
+    --color-secondary: #293ee7;
+    --color-error: #FF595E;
+    --color-warning: #FAA916;
+    --color-success: #96E6B3;
+    --color-background-light: #f0f5f7;
+    --color-paper-light: #ffffff;
+    --color-background-dark: #152335;
+    --color-paper-dark: #1f2f44;
+    --font-family: "Lato, Arial, sans-serif";
+    --root-margin: 1rem;
+    --border-radius: 8px;
+    --input-button-height: 48px;
+}
+html, body {
+    height: 100%;
+}
+<style>
+html {
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    text-size-adjust: 100%;
+}
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--custom-scrollbar-thumb-color) var(--custom-scrollbar-rail-color);
+}
+<style>
+*, ::before, ::after {
+    box-sizing: inherit;
+}
+html[Attributes Style] {
+    -webkit-locale: "en";
+}
+user agent stylesheet
+:root {
+    view-transition-name: root;
+}
+user agent stylesheet
+html {
+    display: block;
+}
+<style>
+*, ::before, ::after {
+    box-sizing: inherit;
+}
+<style>
+*, ::before, ::after {
+    box-sizing: inherit;
+}
+::-webkit-scrollbar {
+    width: var(--custom-scrollbar-width);
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--custom-scrollbar-thumb-color);
+    border-radius: 20px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+}
+::-webkit-scrollbar-track {
+    background: var(--custom-scrollbar-rail-color);
+}
+Easter egg
+There's an Easter egg somewhere in DevTools, behind a colorful 💫 emoji. Can you find it?
+Emulate a focused page in Elements > Styles
+The Elements > Styles tab gets an option to emulate a focused page under the element state (:hov) toggle.
+Lighthouse
+The Lighthouse panel now runs Lighthouse 11.5.0 with a new audit that estimates root causes for layout shifts.

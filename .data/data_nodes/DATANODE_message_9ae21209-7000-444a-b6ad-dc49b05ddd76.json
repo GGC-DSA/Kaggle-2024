@@ -1,0 +1,23 @@
+{
+"id": "DATANODE_message_9ae21209-7000-444a-b6ad-dc49b05ddd76",
+"config_id": "message",
+"scope": "<Scope.SCENARIO: 1>",
+"storage_type": "pickle",
+"name": null,
+"owner_id": "SCENARIO_scenario_ed304ec5-646c-4297-a8b5-8559bcd615f2",
+"parent_ids": [
+"TASK_build_msg_f1988d73-2c77-4a13-b0a7-2cbd542cb698",
+"TASK_save_msg_b842e27a-faed-4ab8-90d0-466022c1949e"
+],
+"last_edit_date": null,
+"edits": [],
+"version": "9373de3e-448c-4fe7-b112-760c38ba600f",
+"validity_days": null,
+"validity_seconds": null,
+"edit_in_progress": false,
+"editor_id": null,
+"editor_expiration_date": null,
+"data_node_properties": {
+"is_generated": true
+}
+}
