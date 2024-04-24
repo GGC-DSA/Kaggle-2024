@@ -5,11 +5,11 @@ import taipy.gui.builder as tgb
 import pandas as pd
 import numpy as np
 
-# test_file = pd.read_json("taipy/test.json")
-# sub_file = pd.read_csv("datasets/Official/sample_submission.csv")
+train_file = pd.read_json("datasets/Official/train.json")
+sub_file = pd.read_csv("datasets/Official/sample_submission.csv")
 
-# sample_file = pd.DataFrame(test_file.head(n=1))
-# sample_output = pd.DataFrame(sub_file.head())
+sample_file = pd.DataFrame(train_file.head(n=1))
+sample_output = pd.DataFrame(sub_file.head())
 
 # print(sample_file)
 # print(sample_output)
@@ -17,7 +17,7 @@ import numpy as np
 with tgb.Page() as application:
   tgb.text("# Upload a copy of your text file* you would like to identify PII in.", mode="md")
   tgb.file_selector(label="Select File", extensions=".txt")
-  # tgb.table(data=test_file)
+  tgb.table(data=train_file.head())
 
 application_md= ("""
 ----------------
@@ -26,7 +26,7 @@ application_md= ("""
 <|{content}|file_selector|label=Select File|extensions=.txt|>
                 
 
-<|table|>             
+<|{train_file}|table|>             
                  
                             
 ### *File must be in .txt format
@@ -35,7 +35,7 @@ application_md= ("""
                  
 ## Your Report:
 
-<|table|>                 
+<|{sample_output}|table|>                 
 
 ### Download your PII Report:
                                         

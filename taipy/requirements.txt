@@ -1,5 +1,4 @@
 taipy
 numpy
 pandas
-matplotlib
-plotly
+tensorflow
