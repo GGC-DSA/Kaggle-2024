@@ -10,7 +10,7 @@ var graphContainer = d3.select("#graph-container");
 console.log(graphContainer);
 
 // Load data
-d3.json("C:/Users/cody1/OneDrive/Desktop/Kaggle-2024/Presento/Presento/datasets/Official/test.json", function (data) {
+d3.json("../datasets/Official/test.json", function (data) {
   dataViz(data);
 });
 
