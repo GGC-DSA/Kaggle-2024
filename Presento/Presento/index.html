@@ -27,6 +27,9 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <title>Lengths of Essays</title>
+  <script src="https://d3js.org/d3.v4.js"></script>
 
   <!-- =======================================================
   * Template Name: Presento
@@ -462,21 +465,38 @@
             </div>
           </div>
 
-          <!-- <div class="col-lg-4 col-md-6 Graphs-item filter-web">
+          <div class="col-lg-4 col-md-6 Graphs-item filter-web">
             <div class="Graphs-wrap">
-              <img src="assets/img/Graphs/Graphs-5.jpg" class="img-fluid" alt="">
+              <svg id="essay-length-graph" style="width:100%; height:100%;" class="img-fluid" alt="">
+              </svg>
               <div class="Graphs-info">
-                <h4>Web 2</h4>
-                <p>Web</p>
+                <h4>Length of Essays</h4>
                 <div class="Graphs-links">
+                  <!-- <a href="assets/img/graphs/model_performance.png" data-gallery="GraphsGallery" class="Graphs-lightbox" title="Enlarge Graph"><i class="bx bx-plus"></i></a> -->
+                  <!-- <a href="Graphs-details.html" title="More Details"><i class="bx bx-link"></i></a> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          
+         <!-- <div class="col-lg-4 col-md-6 Graphs-item filter-web">
+            <div class="Graphs-wrap">
+               <img src="assets/img/Graphs/Graphs-5.jpg" class="img-fluid" alt="">
+              <div class="Graphs-info">
+                <h4>Essay Length Graph</h4>
+                <p>Essay Length Graph</p>
+                <div id="graph-container">
+                  <svg id="essay-length-graph" style="width:600px; height:400px; background-color:#FFFFFF;"></svg>
+                </div>
+              <div class="Graphs-links">
                   <a href="assets/img/Graphs/Graphs-5.jpg" data-gallery="GraphsGallery" class="Graphs-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
                   <a href="Graphs-details.html" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
 
-          <div class="col-lg-4 col-md-6 Graphs-item filter-app">
+          <!-- <div class="col-lg-4 col-md-6 Graphs-item filter-app">
             <div class="Graphs-wrap">
               <img src="assets/img/Graphs/Graphs-6.jpg" class="img-fluid" alt="">
               <div class="Graphs-info">
@@ -535,6 +555,10 @@
         </div>
 
       </div>
+
+      <!-- <script src="https://d3js.org/d3.v4.js"></script> -->
+
+
     </section><!-- End Graphs Section -->
 
     <!-- ======= Team Section ======= -->
@@ -686,6 +710,8 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <script src="d3_visualization.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

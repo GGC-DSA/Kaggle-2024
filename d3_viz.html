@@ -20,13 +20,14 @@
     var svg = d3.select("svg")
 
     // Load data
-    d3.json("test.json", function (d) {
+    d3.json("../datasets/Official/test.json", function (d) {
       // console.log(data)
       dataViz(d)
     });
 
     function dataViz(data) {
       // console.log(incomingData)
+      console.log(data)
       lengths = []
       data.forEach(function (d) {
         lengths.push(d.tokens.length)
