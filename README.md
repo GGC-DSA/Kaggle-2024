@@ -13,6 +13,17 @@ Our team is the Algorithm Allies! We are working on a Kaggle project via their C
 The Kaggle Competition we are participating in is the [PII Data Detection hosted by The Learning Agency Lab](https://www.kaggle.com/competitions/pii-detection-removal-from-educational-data/overview). The objective of the project is to create an AI model that detects personal identifiable information (PII) so they can be censored. This is important when releasing educational material to the public to protect the identity of students. The data is contained in JSONs of student essays that were tokenized using [spaCy](https://spacy.io/).
 
 ---
+
+# Technologies
+* Jupyter Notebooks
+* PyTorch
+* BERT
+* Taipy
+* JavaScript
+* HTML/CSS
+
+---
+
 # Taipy Section
 
 This project uses [Taipy](https://www.taipy.io/). You will needed to run the following code in your command prompt (be sure to run as administrator) 
@@ -122,3 +133,18 @@ This is the main reason for using Taipy. We wanted to make a web application tha
 
  # End Taipy Section
  ---
+
+ # Project Usage
+ The main goal for this project was to be able use this model to find PII data within student essays.
+
+ # Spring 2024
+
+ ## Project Status
+ * Static website showing results
+ * Model trained on the student essays dataset to detect PII and provide a report providing location and type of PII.
+
+## Datasets
+* [Official](https://github.com/GGC-DSA/Kaggle-2024/tree/main/datasets/Official)
+* [External](https://github.com/GGC-DSA/Kaggle-2024/tree/main/datasets/External)
+
+## 
