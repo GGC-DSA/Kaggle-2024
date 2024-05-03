@@ -118,3 +118,45 @@ This is the main reason for using Taipy. We wanted to make a web application tha
  Currently, 2 out of 3 visualizations added are leveraging plotly, with the 3rd still needing to be updated from a png/jpg file into a direct plotly graph.
 
  # End Taipy Section
+
+
+# Spring 2024
+
+ ## Project Status
+ * Static website showing results
+ * Model trained on the student essays dataset to detect PII and provide a report providing location and type of PII.
+ * Taipy site
+    * File upload
+    * Interactive Visualizations
+    * Dataset Preview
+    * Link app page
+
+## Datasets
+* [Official](https://github.com/GGC-DSA/Kaggle-2024/tree/main/datasets/Official)
+* [External](https://github.com/GGC-DSA/Kaggle-2024/tree/main/datasets/External)
+
+## Main methods for analysis and plots
+As we were working out our model inputs, we wanted to see the length of essays. Since out models input was limited to 512, we had to see if the essays would fit in that range.
+
+![Essay Lengths](media\essay_lengths.png)
+
+We used a t-test to evalute the claim that at least one PII was in each essay. We found that the claim of at least one PII per essay was valid.
+
+![PII Distribution](docs\assets\img\graphs\pii_distribution.png)
+
+Next we ran two Tukey tests, the first to determine whether NAME_STUDENT_PII has a different likelyhood to appear than other PII. We found this to be true, shown as well in the plot below.
+
+![Most Common Types PII](docs\assets\img\graphs\most_common_pii.png)
+
+The next Tukey test was to determine what part of the essay the PII is located in. Each essay was split into five parts and the PII was marked under the section it appeared in. We found that the PII data was found in the first part of five more than the other parts.
+
+![Location of PII](docs\assets\img\graphs\pii_location.png)
+
+
+## TODO - Remaining Scope
+* Use different preprocessing methods 
+* Try more rebalancing or different hyperparameters 
+* Try to use a different pre-trained model like RoBERTA or distilBERT 
+* Supplement training with the additional datasets found 
+* Add model to Taipy site 
+* Find a host for the Taipy site 
