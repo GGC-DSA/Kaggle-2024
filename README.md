@@ -75,10 +75,8 @@ pip install plotly
 
 Optionally, you can navigate to the directory where the requirements.txt file is located, and run ```pip install -r requirements.txt``` - this will properly install all of the libraries and modules that are required by the application to run.
 
----
-
 ## Our Usage
----
+
 There are 4 main parts of the web application page:
 - The Home Page
 - The About Page
@@ -109,4 +107,3 @@ This is the main reason for using Taipy. We wanted to make a web application tha
  Currently, 2 out of 3 visualizations added are leveraging plotly, with the 3rd still needing to be updated from a png/jpg file into a direct plotly graph.
 
  # End Taipy Section
- ---
