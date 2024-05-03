@@ -16,12 +16,13 @@ The Kaggle Competition we are participating in is the [PII Data Detection hosted
 
 # Links
 * [Project Website](ggc-dsa.github.io/Kaggle-2024/)
-* [Inference Notebook](code\AlgAllies-PII-Inference.ipynb)
-* [Training Notebook](code\AlgAllies-PII-Training.ipynb)
+* [Inference Notebook](code/AlgAllies-PII-Inference.ipynb)
+* [Training Notebook](code/AlgAllies-PII-Training.ipynb)
 * [Vlogs](media)
+* [Final Report](docs-Spr2024/Report.docx)
 
 # Presentations
-* STaRS @ GGC on 4/11/2024 - won honorable mention / [Poster](docs-Spr2024\Alg_Allies_Kaggle_Poster_STARS.pdf)
+* STaRS @ GGC on 4/11/2024 - won honorable mention / [Poster](docs-Spr2024/Alg_Allies_Kaggle_Poster_STARS.pdf)
 * CREATE Symposium @ GGC on 4/25/2024 - presented / [Project Website](ggc-dsa.github.io/Kaggle-2024/)
 
 # Technologies
