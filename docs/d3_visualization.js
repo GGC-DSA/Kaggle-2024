@@ -10,9 +10,26 @@ var graphContainer = d3.select("#graph-container");
 console.log(graphContainer);
 
 // Load data
-d3.json("../datasets/Official/test.json", function (data) {
-  dataViz(data);
-});
+// d3.json("../datasets/Official/test.json", function (data) {
+//   dataViz(data);
+// });
+
+const response = fetch('https://raw.githubusercontent.com/GGC-DSA/Kaggle-2024/main/datasets/Official/test.json', {
+      method: 'GET',
+    })
+      .then(response => {
+        if (response.ok) {
+          return response.json();
+        }
+        throw new Error('Network response was not ok.');
+      })
+      .then(data => {
+
+        console.log(data)
+        dataViz(data)
+
+      })
+      .catch(error => console.error('There has been a problem with your fetch operation:', error));
 
 function dataViz(data) {
   var lengths = [];
