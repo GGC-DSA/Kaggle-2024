@@ -22,7 +22,7 @@ The Kaggle Competition we are participating in is the [PII Data Detection hosted
 
 # Presentations
 * STaRS @ GGC on 4/11/2024 - won honorable mention / [Poster](docs-Spr2024\Alg_Allies_Kaggle_Poster_STARS.pdf)
-* CREATE Symposium @ GGC on 4/25/2024 - presented project website / [Project Website](ggc-dsa.github.io/Kaggle-2024/)
+* CREATE Symposium @ GGC on 4/25/2024 - presented / [Project Website](ggc-dsa.github.io/Kaggle-2024/)
 
 # Technologies
 * Jupyter Notebooks
@@ -148,19 +148,19 @@ This is the main reason for using Taipy. We wanted to make a web application tha
 ## Main methods for analysis and plots
 As we were working out our model inputs, we wanted to see the length of essays. Since out models input was limited to 512, we had to see if the essays would fit in that range.
 
-![Essay Lengths](media\essay_lengths.png)
+![Essay Lengths](media/essay_lengths.png)
 
 We used a t-test to evalute the claim that at least one PII was in each essay. We found that the claim of at least one PII per essay was valid.
 
-![PII Distribution](docs\assets\img\graphs\pii_distribution.png)
+![PII Distribution](docs/assets/img/graphs/pii_distribution.png)
 
 Next we ran two Tukey tests, the first to determine whether NAME_STUDENT_PII has a different likelyhood to appear than other PII. We found this to be true, shown as well in the plot below.
 
-![Most Common Types PII](docs\assets\img\graphs\most_common_pii.png)
+![Most Common Types PII](docs/assets/img/graphs/most_common_pii.png)
 
 The next Tukey test was to determine what part of the essay the PII is located in. Each essay was split into five parts and the PII was marked under the section it appeared in. We found that the PII data was found in the first part of five more than the other parts.
 
-![Location of PII](docs\assets\img\graphs\pii_location.png)
+![Location of PII](docs/assets/img/graphs/pii_location.png)
 
 
 ## TODO - Remaining Scope
