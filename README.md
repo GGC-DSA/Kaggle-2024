@@ -13,6 +13,54 @@ Our team is the Algorithm Allies! We are working on a Kaggle project via their C
 The Kaggle Competition we are participating in is the [PII Data Detection hosted by The Learning Agency Lab](https://www.kaggle.com/competitions/pii-detection-removal-from-educational-data/overview). The objective of the project is to create an AI model that detects personal identifiable information (PII) so they can be censored. This is important when releasing educational material to the public to protect the identity of students. The data is contained in JSONs of student essays that were tokenized using [spaCy](https://spacy.io/).
 
 ---
+
+# Links
+* [Project Website](https://ggc-dsa.github.io/Kaggle-2024/)
+* [Inference Notebook](code/AlgAllies-PII-Inference.ipynb)
+* [Training Notebook](code/AlgAllies-PII-Training.ipynb)
+* [Vlogs](media)
+* [Final Report](docs-Spr2024/Report.docx)
+
+# Presentations
+* STaRS @ GGC on 4/11/2024 - won honorable mention / [Poster](docs-Spr2024/Alg_Allies_Kaggle_Poster_STARS.pdf)
+* CREATE Symposium @ GGC on 4/25/2024 - presented / [Project Website](https://ggc-dsa.github.io/Kaggle-2024/)
+
+# Technologies
+* Jupyter Notebooks
+    * Kaggle
+    * Google Colab
+* PyTorch
+* BERT
+* Taipy
+* JavaScript
+* HTML/CSS
+* Bootstrap
+* Git LFS
+* GitHub
+* Docker
+* DockerHub
+
+---
+
+# Git LFS
+
+Since the size of the dataset is larger than 100 MB - the limit for GitHub, you must install Git LFS:
+
+* The first stepm is to install Git LFS
+
+`install git lfs`
+
+* Start file tracking for git lfs in the repo
+
+`git lfs track *.json`
+
+After cloning the repo locally, it clones the Git LFS pointer file, not the data file. To get the data file itself run this:
+
+`git lfs pull`
+
+
+
+
 # Taipy Section
 
 This project uses [Taipy](https://www.taipy.io/). You will needed to run the following code in your command prompt (be sure to run as administrator) 
@@ -92,7 +140,7 @@ The goal of the about page was simply to provide information about the project, 
 ### The App Page
 This is the main reason for using Taipy. We wanted to make a web application that enables our model to be used by anyone and everyone. The app page is complete with the buttons that allow users to upload their text files, and download their reports.
 
-** At the time of creation of this README, there are non-functional pieces to this page in the site. The following has not yet been implemented **
+**At the time of creation of this README, there are non-functional pieces to this page in the site. The following has not yet been implemented**
  - The model has not yet been added to the application, so it is not possible in current state to have your text processed via the web application.
  - The upload functionality is mostly working, however, since there was an inability to test with a server of sorts outside of our local machines, we were unable to enable functionality that would gurantee saving a file - even for intermediate use.
  - There is no tokenization process built into the web application. This sort of feeds off of the previous point, but without the ability to have a file uploaded by the user, we were unable to work with the text in any manner for processing.
@@ -107,3 +155,45 @@ This is the main reason for using Taipy. We wanted to make a web application tha
  Currently, 2 out of 3 visualizations added are leveraging plotly, with the 3rd still needing to be updated from a png/jpg file into a direct plotly graph.
 
  # End Taipy Section
+
+
+
+ # Project Results
+ * Static website
+    * Analysis/Visualizations
+    * Link to taipy app
+ * Model trained on the student essays dataset to detect PII and provide a report providing location and type of PII.
+ * Taipy web app
+    * File upload
+    * Interactive Visualizations
+    * Dataset Preview
+
+## Datasets
+* [Official](https://github.com/GGC-DSA/Kaggle-2024/tree/main/datasets/Official) - provided by the Kaggle competition
+* [External](https://github.com/GGC-DSA/Kaggle-2024/tree/main/datasets/External) - aggregated from pertinent Kaggle datasets outside the competition
+
+## Main methods for analysis and plots
+As we were working out our model inputs, we wanted to see the length of essays. Since out models input was limited to 512, we had to see if the essays would fit in that range.
+
+![Essay Lengths](media/essay_lengths.png)
+
+We used a t-test to evalute the claim that at least one PII was in each essay. We found that the claim of at least one PII per essay was support by the data.
+
+![PII Distribution](docs/assets/img/graphs/pii_distribution.png)
+
+Next we ran two Tukey tests, the first to determine whether NAME_STUDENT_PII has a greater likelihood to appear than other PII. We found this to be true, shown as well in the plot below.
+
+![Most Common Types PII](docs/assets/img/graphs/most_common_pii.png)
+
+The next Tukey test was to determine what part of the essay the PII is located in. Each essay was split into five parts and the PII was marked under the section it appeared in. We found that the PII data was found in the first part of five more than the other parts.
+
+![Location of PII](docs/assets/img/graphs/pii_location.png)
+
+
+# TODO - Remaining Scope
+* Use different preprocessing methods 
+* Try more rebalancing or different hyperparameters 
+* Try to use a different pre-trained model like RoBERTA or distilBERT 
+* Supplement training with the additional datasets found 
+* Add model to Taipy site 
+* Find a host for the Taipy site 
