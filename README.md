@@ -197,4 +197,3 @@ The next Tukey test was to determine what part of the essay the PII is located i
 * Supplement training with the additional datasets found 
 * Add model to Taipy site 
 * Find a host for the Taipy site
-* D3.js visualizaion ([more info](docs/README.md))
