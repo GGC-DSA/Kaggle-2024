@@ -15,7 +15,7 @@ The Kaggle Competition we are participating in is the [PII Data Detection hosted
 ---
 
 # Links
-* [Project Website](ggc-dsa.github.io/Kaggle-2024/)
+* [Project Website](https://ggc-dsa.github.io/Kaggle-2024/)
 * [Inference Notebook](code/AlgAllies-PII-Inference.ipynb)
 * [Training Notebook](code/AlgAllies-PII-Training.ipynb)
 * [Vlogs](media)
@@ -23,7 +23,7 @@ The Kaggle Competition we are participating in is the [PII Data Detection hosted
 
 # Presentations
 * STaRS @ GGC on 4/11/2024 - won honorable mention / [Poster](docs-Spr2024/Alg_Allies_Kaggle_Poster_STARS.pdf)
-* CREATE Symposium @ GGC on 4/25/2024 - presented / [Project Website](ggc-dsa.github.io/Kaggle-2024/)
+* CREATE Symposium @ GGC on 4/25/2024 - presented / [Project Website](https://ggc-dsa.github.io/Kaggle-2024/)
 
 # Technologies
 * Jupyter Notebooks
@@ -54,15 +54,11 @@ Since the size of the dataset is larger than 100 MB - the limit for GitHub, you 
 
 `git lfs track *.json`
 
-* Stage/Commit/Push training json
+After cloning the repo locally, it clones the Git LFS pointer file, not the data file. To get the data file itself run this:
 
-`git add train.json`
+`git lfs pull`
 
-`git commit -m "add train.json"`
 
-`git push`
-
-After cloning the repo locally, it clones the Git LFS pointer file, not the data file.
 
 
 # Taipy Section
@@ -144,7 +140,7 @@ The goal of the about page was simply to provide information about the project, 
 ### The App Page
 This is the main reason for using Taipy. We wanted to make a web application that enables our model to be used by anyone and everyone. The app page is complete with the buttons that allow users to upload their text files, and download their reports.
 
-** At the time of creation of this README, there are non-functional pieces to this page in the site. The following has not yet been implemented **
+**At the time of creation of this README, there are non-functional pieces to this page in the site. The following has not yet been implemented**
  - The model has not yet been added to the application, so it is not possible in current state to have your text processed via the web application.
  - The upload functionality is mostly working, however, since there was an inability to test with a server of sorts outside of our local machines, we were unable to enable functionality that would gurantee saving a file - even for intermediate use.
  - There is no tokenization process built into the web application. This sort of feeds off of the previous point, but without the ability to have a file uploaded by the user, we were unable to work with the text in any manner for processing.
@@ -173,8 +169,8 @@ This is the main reason for using Taipy. We wanted to make a web application tha
     * Dataset Preview
 
 ## Datasets
-* [Official](https://github.com/GGC-DSA/Kaggle-2024/tree/main/datasets/Official)
-* [External](https://github.com/GGC-DSA/Kaggle-2024/tree/main/datasets/External)
+* [Official](https://github.com/GGC-DSA/Kaggle-2024/tree/main/datasets/Official) - provided by the Kaggle competition
+* [External](https://github.com/GGC-DSA/Kaggle-2024/tree/main/datasets/External) - aggregated from pertinent Kaggle datasets outside the competition
 
 ## Main methods for analysis and plots
 As we were working out our model inputs, we wanted to see the length of essays. Since out models input was limited to 512, we had to see if the essays would fit in that range.
