@@ -37,7 +37,7 @@ To run the application locally, you will need to navigate to the directory where
 
 This will bring up a browser window which is hosted on port 5000 on your local machine. The ip address should show as your loopback number (127.0.0.1:8888). Upon success, this is where you continue to use the application. 
 
-# How to use the application
+## How to use the application
 
 ### The goal of this application is to leverage our machine learning model to accept user input of a few words, sentences, or paragraphs in efforts to properly identify PII. The required input is a text file.
 
@@ -86,21 +86,7 @@ pip install plotly
 
 Optionally, you can navigate to the directory where the requirements.txt file is located, and run ```pip install -r requirements.txt``` - this will properly install all of the libraries and modules that are required by the application to run.
 
----
-
-# Taipy Section
-
-This project uses [Taipy](https://www.taipy.io/). You will needed to run the following code in your command prompt (be sure to run as administrator) 
-
-```
-pip install taipy
-```
-
-This will enable you to properly run the taipy application locally. The project will be accessible and able to run in the cloud environment provided by Taipy. 
-
-To run the application locally, you will need to navigate to the directory where you have the repo cloned, into the taipy folder e.g.(C:\Users\user1\Desktop\Kaggle-2024\taipy\main.py), and in your command prompt, terminal, or bash terminal, use "python main.py" to run the file and see the application using your local machine.
-
-This will bring up a browser window which is hosted on port 8888 on your local machine. The ip address should show as your loopback number (127.0.0.1:8888). Upon success, this is where you continue to use the application. 
+## Our Usage
 
 There are 4 main parts of the web application page:
 - The Home Page
@@ -132,19 +118,3 @@ This is the main reason for using Taipy. We wanted to make a web application tha
  Currently, 2 out of 3 visualizations added are leveraging plotly, with the 3rd still needing to be updated from a png/jpg file into a direct plotly graph.
 
  # End Taipy Section
- ---
-
- # Project Usage
- The main goal for this project was to be able use this model to find PII data within student essays.
-
- # Spring 2024
-
- ## Project Status
- * Static website showing results
- * Model trained on the student essays dataset to detect PII and provide a report providing location and type of PII.
-
-## Datasets
-* [Official](https://github.com/GGC-DSA/Kaggle-2024/tree/main/datasets/Official)
-* [External](https://github.com/GGC-DSA/Kaggle-2024/tree/main/datasets/External)
-
-## 
