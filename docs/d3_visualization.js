@@ -14,7 +14,7 @@ console.log(graphContainer);
 //   dataViz(data);
 // });
 
-const response = fetch('https://raw.githubusercontent.com/GGC-DSA/Kaggle-2024/main/datasets/Official/test.json', {
+const response = fetch('https://raw.githubusercontent.com/GGC-DSA/Kaggle-2024/main/datasets/External/essay_lengths.json', {
       method: 'GET',
     })
       .then(response => {
@@ -33,9 +33,9 @@ const response = fetch('https://raw.githubusercontent.com/GGC-DSA/Kaggle-2024/ma
 
 function dataViz(data) {
   var lengths = [];
-  data.forEach(function (d) {
-    lengths.push(d.tokens.length);
-  });
+  for (const i in data) {
+    lengths.push(data[i])
+  };
   console.log(lengths);
 
   // Set the parameters for the histogram
