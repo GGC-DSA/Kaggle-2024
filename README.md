@@ -26,7 +26,7 @@ To run the application locally, you will need to navigate to the directory where
 
 This will bring up a browser window which is hosted on port 5000 on your local machine. The ip address should show as your loopback number (127.0.0.1:8888). Upon success, this is where you continue to use the application. 
 
-# How to use the application
+## How to use the application
 
 ### The goal of this application is to leverage our machine learning model to accept user input of a few words, sentences, or paragraphs in efforts to properly identify PII. The required input is a text file.
 
@@ -77,7 +77,7 @@ Optionally, you can navigate to the directory where the requirements.txt file is
 
 ---
 
-# Our Usage
+## Our Usage
 ---
 There are 4 main parts of the web application page:
 - The Home Page
