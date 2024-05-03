@@ -27,13 +27,43 @@ The Kaggle Competition we are participating in is the [PII Data Detection hosted
 
 # Technologies
 * Jupyter Notebooks
+    * Kaggle
+    * Google Colab
 * PyTorch
 * BERT
 * Taipy
 * JavaScript
 * HTML/CSS
+* Bootstrap
+* Git LFS
+* GitHub
+* Docker
+* DockerHub
 
 ---
+
+# GIT LFS
+
+Since the size of the dataset is larger than 100 MB - the limit for GitHub, you must install Git LFS:
+
+* The first stepm is to install Git LFS
+
+`install git lfs`
+
+* Start file tracking for git lfs in the repo
+
+`git lfs track *.json`
+
+* Stage/Commit/Push training json
+
+`git add train.json`
+
+`git commit -m "add train.json"`
+
+`git push`
+
+After cloning the repo locally, it clones the Git LFS pointer file, not the data file.
+
 
 # Taipy Section
 
@@ -131,16 +161,16 @@ This is the main reason for using Taipy. We wanted to make a web application tha
  # End Taipy Section
 
 
-# Spring 2024
 
- ## Project Status
- * Static website showing results
+ # Project Results
+ * Static website
+    * Analysis/Visualizations
+    * Link to taipy app
  * Model trained on the student essays dataset to detect PII and provide a report providing location and type of PII.
- * Taipy site
+ * Taipy web app
     * File upload
     * Interactive Visualizations
     * Dataset Preview
-    * Link app page
 
 ## Datasets
 * [Official](https://github.com/GGC-DSA/Kaggle-2024/tree/main/datasets/Official)
@@ -151,11 +181,11 @@ As we were working out our model inputs, we wanted to see the length of essays. 
 
 ![Essay Lengths](media/essay_lengths.png)
 
-We used a t-test to evalute the claim that at least one PII was in each essay. We found that the claim of at least one PII per essay was valid.
+We used a t-test to evalute the claim that at least one PII was in each essay. We found that the claim of at least one PII per essay was support by the data.
 
 ![PII Distribution](docs/assets/img/graphs/pii_distribution.png)
 
-Next we ran two Tukey tests, the first to determine whether NAME_STUDENT_PII has a different likelyhood to appear than other PII. We found this to be true, shown as well in the plot below.
+Next we ran two Tukey tests, the first to determine whether NAME_STUDENT_PII has a greater likelihood to appear than other PII. We found this to be true, shown as well in the plot below.
 
 ![Most Common Types PII](docs/assets/img/graphs/most_common_pii.png)
 
@@ -164,7 +194,7 @@ The next Tukey test was to determine what part of the essay the PII is located i
 ![Location of PII](docs/assets/img/graphs/pii_location.png)
 
 
-## TODO - Remaining Scope
+# TODO - Remaining Scope
 * Use different preprocessing methods 
 * Try more rebalancing or different hyperparameters 
 * Try to use a different pre-trained model like RoBERTA or distilBERT 
