@@ -42,7 +42,7 @@ The Kaggle Competition we are participating in is the [PII Data Detection hosted
 
 ---
 
-# GIT LFS
+# Git LFS
 
 Since the size of the dataset is larger than 100 MB - the limit for GitHub, you must install Git LFS:
 
